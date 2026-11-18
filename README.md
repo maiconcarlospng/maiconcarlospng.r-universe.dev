@@ -6,13 +6,21 @@ Configuração de publicação do pacote R **sisabextrator**, mantido em
 O arquivo [`packages.json`](packages.json) identifica o pacote para o R-universe.
 A implementação do pacote R está na **raiz** do repositório de origem.
 
-## Ativar a publicação
+## Primeira publicação no R-universe
 
-1. Instale o [GitHub App do R-universe](https://github.com/apps/r-universe/installations/new)
-   na conta GitHub `maiconcarlospng`, concedendo acesso a este repositório e a
-   `sisab-extrator` (ou a todos os repositórios).
-2. Verifique as compilações em https://maiconcarlospng.r-universe.dev/
-3. Depois de uma compilação bem-sucedida, instale no R:
+- **Configuração criada:** este repositório contém o `packages.json` apontando
+  para `maiconcarlospng/sisab-extrator`.
+- **Permissão informada pelo mantenedor:** GitHub App do R-universe autorizado
+  com acesso a todos os repositórios.
+- **Compilação inicial:** a [documentação oficial](https://docs.r-universe.dev/publish/set-up.html#wait-first-build)
+  informa que a primeira compilação pode levar **cerca de 1 hora**. Antes de
+  concluir, o universo pode mostrar `No packages found for this owner or maintainer`
+  e o índice `src/contrib/PACKAGES` pode não estar disponível.
+- **Acompanhar:** verifique https://maiconcarlospng.r-universe.dev/ e, somente
+  se permanecer vazio depois desse período, investigue os registros do serviço.
+  Um check de GitHub Actions aprovado **não** confirma publicação no R-universe.
+
+Depois que o pacote aparecer no R-universe, instale no R:
 
 ```r
 install.packages(
